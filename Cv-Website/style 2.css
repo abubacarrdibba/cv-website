@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.mat h3{
+  font-size: 20px;
+  font-weight: 12px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+:root {
+    --bg-color: #1f242d;
+     --second-bg-color: #3b4453;
+     --text-color: #fcf1f1;
+     --main-color: #0ef;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px auto;
+  background:   var(--text-color);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.sidebar {
+  flex: 1;
+  min-width: 280px;
+  background: linear-gradient(to bottom, #2c3e50, #34495e);
+  color: white;
+  padding: 30px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.profile-pic img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.sidebar h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.sidebar .title {
+  text-align: center;
+  font-style: italic;
+  font-size: 15px;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #555;
+  display: flex;
+  align-items: center;
+}
+
+.section h3 i {
+  margin-right: 8px;
+  color: #00acee;
+}
+
+.section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.section ul li i {
+  margin-right: 8px;
+  color: #00acee;
+}
+
+.section p i {
+  margin-right: 8px;
+  color: #00acee;
+}
+
+.main-content {
+  flex: 2;
+  min-width: 400px;
+  padding: 30px 40px;
+}
+
+.main-content section {
+  margin-bottom: 30px;
+}
+
+.main-content h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid #00acee;
+  padding-left: 10px;
+}
+
+.main-content h2 i {
+  margin-right: 10px;
+  color: #00acee;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.item h4 {
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.item .date {
+  font-size: 14px;
+  color: #888;
+  display: block;
+  margin: 5px 0 10px;
+}
+
+ul li strong {
+  color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    border-radius: 0;
+  }
+
+  .sidebar,
+  .main-content {
+    min-width: 100%;
+    border-radius: 0;
+  }
+
+  .profile-pic img {
+    width: 140px;
+  }
+}
+
+/* Toggle Button */
+#darkModeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  background-color: #357ABD;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .container {
+  background: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .header-info h1 {
+  color: #90caf9;
+}
+
+body.dark-mode .section h2 {
+  border-color: #90caf9;
+  color: #90caf9;
+}
+
+body.dark-mode .footer {
+  color: #999;
+}
+
+body.dark-mode .skills-list,
+body.dark-mode .job ul,
+body.dark-mode .interests p {
+  color: #ccc;
+}
+
